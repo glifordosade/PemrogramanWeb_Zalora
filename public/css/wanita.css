@@ -1,3 +1,5 @@
+/* mengatur tampilan dari list kategory */
+
 .topList{
     display: flex;
     justify-content: space-between;
