@@ -1,3 +1,4 @@
+<!-- menampilkan notifikasi jika dari kontroller mengirimkan triger notifikasi -->
 <?php Flasher::flash(); ?>
 <div class="isiakun">
     <div class="user">
@@ -44,6 +45,7 @@
                 <h1>Daftar Barang</h1>
                 <div id="masukdikit">
                     <ul>
+                        <!-- menampilkan daftar barang yang telah diinputkan -->
                     <?php foreach ($data['barang'] as $a) {?>
                         <div class="batang">
                             <li><?= $a['nambar']?></li>

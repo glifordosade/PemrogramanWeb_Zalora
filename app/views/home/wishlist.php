@@ -1,4 +1,4 @@
-
+<!-- menampilkan halaman wishlist -->
 <?php if((isset($data['show'])==true)&&($data['show']!= null)){ ?>
     <?php foreach($data['show'] as $a){?>
         <ul>

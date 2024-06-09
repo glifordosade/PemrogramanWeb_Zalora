@@ -1,4 +1,5 @@
 
+<!-- halaman untuk menampilkan detail dari barang yang dipilih -->
 <div class="putih">
     <div class="container">
             <div class="left-section">

@@ -29,6 +29,7 @@
                 <li><a href="">Beauty</a></li>
                 <li><a href="">Home & Livestyle</a></li>
             </ul>
+            <!-- form untuk melakukan pencarian pada barang -->
             <form action="<?= BASEURL;?>/Main" method="POST" id="searchdiv">
                 <input id="search" type="text" placeholder="New Balance Up to 40%" name="pencarian">
                 <button id="searchbut" name="search"><img id="searchlog" src="/img/search1.png" alt=""></button>
@@ -36,7 +37,9 @@
             <div class="set">
                 <span id="userpil">
                     <a href="<?= BASEURL;?>"><img class="log1o" src="<?= BASEURL;?>/img/userput.svg" alt="wishlist"></a>
+                    <!-- menentukan tampilan menu saat login dan sebelum login -->
                     <?php if(isset($_SESSION['user'])!=null):?>
+                    <!-- tampilan setelah login -->
                     <ul class="drop">
                       <div id="name">SELAMAT DATANG, <?= strtoupper($_SESSION['user']);?></div>
                       <div id="pad">
@@ -54,6 +57,7 @@
                       </div>
                     </ul>
                     <?php else :?>
+                    <!-- tampilan jika belum melakukan login -->
                     <ul class="drop">
                       <div id="name">SELAMAT DATANG!</div>
                       <div id="pad">

@@ -9,6 +9,7 @@
         </div>
     </div>
     <br>
+    <!-- menampilkan notifikasi jika dari kontroller mengirimkan triger notifikasi -->
     <?php Flasherf::flashf();?>
     <form id="registration-form" method="POST" action="<?= BASEURL;?>/Account/log">
         <label for="email">Alamat Email</label>

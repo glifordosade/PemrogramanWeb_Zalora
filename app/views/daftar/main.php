@@ -69,6 +69,7 @@
                  
             </div>
         </div>
+        <!-- menampilkan hasil dari pencarian user -->
         <div class="barang">
             <?php foreach($data['barang'] as $it):?>
             <a href="<?= BASEURL;?>/Main/Detail/<?= $it['Id_Barang'] ?>" class="cardd">

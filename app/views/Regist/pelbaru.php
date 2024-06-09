@@ -1,4 +1,4 @@
-
+<!-- menampilkan form untuk melakukan registrasi dari user baru -->
 <div id="container">
     <div id="pilihan">
         <div style="border-bottom: 5px solid black;">

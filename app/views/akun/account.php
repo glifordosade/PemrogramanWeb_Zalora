@@ -1,7 +1,8 @@
 <br>
 
-
+<!-- memilih apakah yang logi admin atau user umum -->
 <?php if(isset($_SESSION['user'])&&($_SESSION['user']=='Adminnich')){ ?>
+    <!-- tampilan jika yang logi merupakan admin -->
 <div class="isiakun">
     <div class="user">
         <div id="setdiv">ADMIN</div>
@@ -54,6 +55,7 @@
                     </div>
                     <div id="ul2">
                         <div class="bio">
+                            <!-- menampilkan biodata admin -->
                             <p><?= $_SESSION['user'];?></p>
                             <p><?= $_SESSION['email'];?></p>
                             <p><?= $_SESSION['ttl'];?></p>
@@ -95,6 +97,7 @@
     </div>
 </div>
 <?php }else{?>
+    <!-- tapilan jika yang login merupakan user biasa -->
     <div class="isiakun">
         <div class="user">
             <div id="setdiv">AKUN SAYA</div>
@@ -147,6 +150,7 @@
                         </div>
                         <div id="ul2">
                             <div class="bio">
+                                <!-- menampilkan biodata user -->
                                 <p><?= $_SESSION['user'];?></p>
                                 <p><?= $_SESSION['email'];?></p>
                                 <p><?= $_SESSION['ttl'];?></p>

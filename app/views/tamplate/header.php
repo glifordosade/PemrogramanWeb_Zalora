@@ -1,3 +1,5 @@
+
+<!-- tampilan header dari halaman utama pencarian -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +26,7 @@
           <a id="logo" href="<?= BASEURL;?>">
             <img src="<?= BASEURL;?>/img/logo.svg" alt="ZALORA">
           </a>
+          <!-- form untuk melakukan pencarian pada barang -->
         <form action="<?= BASEURL;?>/Main" method="POST" id="searchdiv">
           <input id="search" type="text" placeholder="New Balance Up to 40%" name="pencarian">
           <button id="searchbut" name="search"><img id="searchlog" src="/img/search.png" alt=""></button>
@@ -32,7 +35,9 @@
           <div id="logouser">
             <a href="<?= BASEURL;?>/akun"><img class="log1o" src="<?= BASEURL;?>/img/user.png" alt="user"></a>
             <span id="usernya">
+              <!-- menentukan tampilan menu saat login dan sebelum login -->
               <?php if(isset($_SESSION['user'])!= null):?>
+                <!-- tampilan setelah login -->
                 <?= "Hi,".$_SESSION['user']; ?>
                 <ul class="drop">
                   <img class="log2o" src="<?= BASEURL;?>/img/user.png" alt=""><a href="<?= BASEURL;?>/Account">Rincian<li></li></a>
@@ -48,6 +53,7 @@
                   <img class="log2o" src="<?= BASEURL;?>/img/out.png" alt=""><a href="<?= BASEURL;?>/Home/logout">Log out<li></li></a>
                 </ul>
               <?php else :?>
+                <!-- tampilan jika belum melakukan login -->
                 <?= 'Daftar/Masuk';?>
                 <ul class="drop">
                   <img class="log2o" src="<?= BASEURL;?>/img/out.png" alt=""><a href="<?= BASEURL;?>/Regist/pelma">Masuk/Daftar<li></li></a>

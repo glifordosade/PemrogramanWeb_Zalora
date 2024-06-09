@@ -1,4 +1,6 @@
-/* scripts.js */
+/* program javascript untuk mengatur tampilan slideshow */
+
+
 let slideIndex = [1];
 let slideId = ["mySlides1"];
 showSlides(1,0 );

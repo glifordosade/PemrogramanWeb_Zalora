@@ -1,4 +1,4 @@
-
+<!-- menampilkan notifikasi jika dari kontroller mengirimkan triger notifikasi -->
 <?php Flasher::flash(); ?>
 <div class="isiakun">
     <div class="user">
@@ -39,6 +39,7 @@
             </a>
         </ul>
     </div>
+    <!-- menampilkan form untuk melakukan update pada data barang -->
     <div id="zz">
         <div class="blockisi">
             <div class="blokket">

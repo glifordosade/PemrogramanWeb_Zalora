@@ -1,3 +1,6 @@
+
+
+<!-- menampilkan bagian footer dari website -->
 <footer id="footer" class="a-footer">
         <section class="a-footer_dark ptxl pbxl">
             <div class="container_fluid">
