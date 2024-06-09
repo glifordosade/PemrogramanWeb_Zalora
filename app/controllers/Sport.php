@@ -1,6 +1,7 @@
 <?php
 
 class Sport extends Controller{
+    // menampilkan halaman kategory sport
     public function index(){
         $data['title'] = 'Sport';
         // $data['isi'] = $this->model('userModel')->();

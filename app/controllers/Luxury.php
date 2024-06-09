@@ -1,5 +1,5 @@
 <?php
-
+// menampilkan halaman kategory user
 class Luxury extends Controller{
     public function index(){
         $data['title'] = 'Luxury';

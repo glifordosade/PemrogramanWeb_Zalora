@@ -1,6 +1,5 @@
 <?php
-
-
+// kontroller untuk menampilkan halaman utama pengaturan akun
 class Account extends Controller{
     public function index(){
         $data['title'] = 'Akun Saya';
@@ -9,6 +8,7 @@ class Account extends Controller{
         $this->view('tamplate/footer');
     }
 
+    // mengatur login user
     public function log(){
         $email = $_POST['email'];
         $pass = $_POST['password'];

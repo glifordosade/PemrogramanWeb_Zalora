@@ -90,6 +90,7 @@ class Authup extends Controller{
             die;
         }
 
+        // membuat nama baru dari gambar barang yang dimasukkan
         $namabaru = uniqid();
         $namabaru .= '.';
         $namabaru .= $format;

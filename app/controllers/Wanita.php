@@ -1,6 +1,7 @@
 <?php
 
 class Wanita extends Controller{
+    // menampilkan halaman kategory wanita
     public function index(){
         $data['title'] = 'Wanita';
         // $data['isi'] = $this->model('userModel')->();

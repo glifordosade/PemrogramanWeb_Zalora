@@ -2,12 +2,14 @@
 
 class Regist extends Controller{
     public function index(){
+        // menampilkan halaman registrasi untuk user baru
         $data['title'] = 'Zalora | Registrasi';
         $this->view('tamplate/header1',$data);
         $this->view('Regist/pelbaru');
         $this->view('tamplate/footer');
     }
 
+    // menampilkan halaman login untuk user
     public function pelma(){
         $data['title'] = 'Zalora | Masuk';
         $this->view('tamplate/header1',$data);
@@ -15,6 +17,7 @@ class Regist extends Controller{
         $this->view('tamplate/footer');
     }
 
+    // memproses registrasi dari dari user baru
     public function regist(){
         $email =$_POST['email'];
         $pass =$_POST['pass'];

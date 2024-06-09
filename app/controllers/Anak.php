@@ -1,5 +1,5 @@
 <?php
-
+// menampilkan halaman kategory anak
 class Anak extends Controller{
     public function index(){
         $data['title'] = 'Anak';

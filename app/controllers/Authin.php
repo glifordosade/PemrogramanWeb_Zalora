@@ -1,6 +1,7 @@
 <?php
 class Authin extends Controller{
 
+    // menampilkan halaman tambah barang
     public function index(){
         $data['title'] = 'Tambah Barang';
         $this->view('tamplate/header1', $data );
@@ -8,6 +9,7 @@ class Authin extends Controller{
         $this->view('tamplate/footer');
     }
 
+    // mengtur penambahan data barang baru
     public function Tambah(){
         $nambar =$_POST['nambar'];
         $harga =$_POST['harga'];
@@ -35,6 +37,8 @@ class Authin extends Controller{
         }
 
     }
+
+    // fungsi upload untuk menyeleksi file yang dimasukkan
     function upload(){
         $namaImg=$_FILES['pic']['name'];
         $ukuranImg=$_FILES['pic']['size'];

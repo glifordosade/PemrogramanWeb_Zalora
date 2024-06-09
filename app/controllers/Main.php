@@ -13,6 +13,7 @@ class Main extends Controller{
         $this->view('tamplate/footer');
     }
 
+    //mengarahkan ke halaman detail dari barang 
     public function Detail($ID){
         $data['title'] = 'Search';
         $data['barang'] = $this->model('cardModel')->PerId($ID);

@@ -1,5 +1,5 @@
 <?php
-
+// fungsi untuk mengatur halaman kategry hom&livestyle 
 class Livestyle extends Controller{
     public function index(){
         $data['title'] = 'Home & Live Style';

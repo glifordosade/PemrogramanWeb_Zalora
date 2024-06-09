@@ -1,6 +1,7 @@
 <?php
 class Wish extends Controller{
     public function index($id=null)
+    // menampilkan halaman wishlist
     {
         $da['title'] = 'Wishlist saya';
         if ($id!=null) {

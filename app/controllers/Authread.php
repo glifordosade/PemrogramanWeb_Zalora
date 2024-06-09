@@ -1,6 +1,8 @@
 <?php
-class Authread extends Controller{
 
+class Authread extends Controller{
+    
+    // menampilkan halaman daftar barang yang sudah di tambahkan
     public function index(){
         $data['title'] = 'Daftar Barang';
         $data['barang'] = $this->model('cardModel')->read();
@@ -9,6 +11,7 @@ class Authread extends Controller{
         $this->view('tamplate/footer');
     }
 
+    // kontroller untuk menghapus barang
     public function Hapus($ID){
         // $data['title'] = 'Daftar Barang';
         $namaGambar['gambar'] = $this->model('cardModel')->Gambar($ID);
@@ -22,22 +25,6 @@ class Authread extends Controller{
         Flasher::setFlash('Barang dihapus','hapus','red');
         header("Location: ".BASEURL."/Authread");
     
-    }
-    public function Edit($ID){
-        $data['title'] = 'Daftar Barang';
-        $namaGambar['gambar'] = $this->model('cardModel')->Gambar($ID);
-        $nam = $namaGambar['gambar'];
-        $location = "gambar/".$nam['Pic'];
-        echo $nam['Pic'];
-        echo "<br>";
-        echo $location;
-        if (file_exists($location)) {
-            unlink('gambar/' . $nam["Pic"]);
-            var_dump($namaGambar);
-	    }
-        $dat['barang'] = $this->model('cardModel')->Edit($ID);
-        Flasher::setFlash('Barang dihapus','hapus','red');
-        header("Location: ".BASEURL."/Authread");
     }
 
 
