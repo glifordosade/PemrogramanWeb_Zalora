@@ -1,0 +1,35 @@
+.notif{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    line-height: 70px;
+    border-radius: 25px;
+    left: -200px;
+    top: 80%;
+    width: 200px;
+    height: 60px;
+    animation: anime;
+    animation-duration: 2s;
+}
+
+@keyframes anime{
+    0%{left: -210px;}
+    10%{left: 150px;}
+    /* 50%{left: 200px;} */
+    90%{left: 150px;}
+    100%{left: -210px;}
+}
+
+.notiff{
+    background-color: indianred;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-size: small;
+    padding: 0px 20px;
+    line-height: 40px;
+    border-radius: 25px;
+    height: 40px;
+    margin: 0px 14%;
+}

@@ -1,0 +1,18 @@
+.topList{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0px auto;
+    /* background-color: aquamarine; */
+}
+
+.bulatan{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    /* background-color: bisque; */
+    border-radius: 60px;
+}
+.bulatan:hover{
+     opacity: 0.5;    
+}

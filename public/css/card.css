@@ -1,0 +1,82 @@
+.main{
+    /* background-color: aqua; */
+    display: flex;
+    /* flex-wrap: nowrap;     */
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.filterside{
+    text-align: center;
+    display: inline-block ;
+    width: 600px;
+}
+
+.filterdiv{ 
+    display: inline-block;
+    width: 80%;
+    background-color: white;
+    height: 45px;
+    margin: 20px auto;
+    border-radius: 20px;
+    text-align: left;
+    line-height: 45px;
+    box-shadow: 2px 3px 10px 2px rgb(207, 207, 207);
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+
+.barang{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: 400px;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 100px;
+}
+
+.cardd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: rgb(20, 99, 99); */
+    width: 260px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.carddis{
+    display: inline-block;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 20px;
+    width: 250px;
+    height: 300px;
+    margin: 0px auto;
+    /* background-color: aquamarine; */
+
+}
+
+.deskripsi{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.brand{
+    font-weight: bold;
+}
+
+.harga{
+    font-weight: bold;
+    padding-top: 20px;
+    color: rgb(192, 3, 3);
+}
+
+/* .bris{
+    display: inline-block;
+} */

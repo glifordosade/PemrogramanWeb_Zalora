@@ -1,0 +1,306 @@
+body{
+    background-color: rgb(214, 213, 213);
+    
+}
+
+.headd{
+    display: block;
+    position: fixed;
+    width: 100%;
+    /* height: 127px; */
+    color: white;
+    line-height: 30px;
+    background-color: white;
+    z-index: 99;
+}
+
+.wrapper{
+    /* background-color: aquamarine; */
+    max-width: 2000px;
+    margin: 0px auto 0px auto;
+    border-bottom: 2px solid rgb(213, 213, 213);
+}
+
+.navv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 2000px;
+    margin: 0px auto 0px auto;
+}
+
+#logo{
+    display: inline-block;
+    width: 150px;
+    margin: 20px 0px 12px 14px;
+    align-items: center;
+}
+#logo img{
+    width: 100%;
+}
+
+
+
+/*============================SEARCHING============================================== */
+#searchdiv{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: white;
+    border: 2px solid rgb(225, 225, 225);
+    position: relative;
+    border-radius: 25px;
+    height: 35px;
+    margin: 10px 10px 5px 14px ;
+    width: 50%;
+    line-height: 50px;
+    /* background-color: black; */
+}
+
+#searchbut{
+    display: inline-block;
+    background-color: white;
+    border-radius: 25px;
+    border: 0px;
+    width: 40px;
+    height: 35px;
+    
+}
+
+#searchlog{
+    display: inline-block;
+    width: 33px;
+
+    /* left: 3px; */
+    /* top: 30px; */
+    line-height: 10px;
+}
+
+
+#search{
+    display: inline-block;
+    /* background-color: aquamarine; */
+    width: 89%;
+    height: 33px;
+    border-radius: 35px;
+    border-style: none;
+    padding: 1px 20px 1px 20px;
+    line-height: 35px;
+}
+/* =========================prof=========================================== */
+
+#prof{
+    display: inline-block;
+    /* background-color: bisque; */
+    line-height: 55px;
+    margin-top: 13px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#logouser{
+    display: inline;
+    padding-right: 3px;
+    padding: 10px;
+}
+
+#logouser a{
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+}
+
+#logouser a:hover{
+    text-decoration: underline;
+}
+#usernya{
+    padding-left: 3px;
+}
+
+.log2o{
+    padding: 2px;
+    width: 20px;
+    box-sizing: 30px;
+    margin-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    /* background-color: blue; */
+}
+.log1o{
+    padding: 2px;
+    width: 20px;
+    box-sizing: 30px;
+    margin-left: 10px;
+    /* background-color: blue; */
+}
+
+.log1o:hover{
+    border-bottom: 3px solid black;
+}
+
+#logouser .drop{
+    display: none;
+    position: absolute;
+    padding: 0px 10px 0px 10px;
+    font-size: small;
+    background-color: rgb(247, 247, 247);
+    border-radius: 15px;
+    box-shadow: 2px 3px 10px 2px rgb(152, 152, 152);
+}
+
+#logouser:hover .drop{
+    display: block;
+    width: 250px;
+    top: 60px;
+    position: absolute;
+    border-radius: 20px;
+    right: 100px;
+}
+
+
+#bag #isitas{
+    display: none;
+}
+
+#padpad{
+    padding: 30px;
+    text-align: center;
+}
+
+#loggg{
+    width: 200px;
+}
+
+#linkk{
+    display: inline-block;
+    font-weight: 100;
+    font-size: small;
+    background-color: black;
+    padding: 0px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: white;
+    text-decoration: none;
+
+}
+#linkk:hover{
+    background-color: white;
+    color: black;
+}
+
+#padpad #bold{
+    display: block;
+    text-align: center;
+    height: 20px;
+    font-weight: bold;
+}
+#padpad #thin{
+    display: block;
+    text-align: center;
+    font-weight: 100;
+    font-size: smaller;
+}
+
+#bag:hover #isitas{
+    background-color: white;
+    position: absolute;
+    display: inline-block;
+    width: 360px;
+    right: 60px;
+    top: 50px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 10px 2px rgb(152, 152, 152);
+}
+
+
+/*=========================== KATEGORY====================================== */
+#kategory{
+    padding-left: 7%;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+#kategory li{
+    display: inline-block;
+    padding: 3px 5px;
+    margin-top: 12px;
+}
+
+#kategory a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+#kategory a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* ==================filler */
+
+#filler{
+    height: 150px;
+    background-color: white;
+    z-index: 99;
+    /* position: absolute; */
+}
+
+
+/* =======================-------------======================== */
+@media screen and (max-width : 760px) {
+    #filler{
+        height: 200px;
+        /* position: absolute; */
+    }
+    .navv{
+        justify-content: flex-start;
+    }
+
+    #logo{
+        margin: 15px 0px 10px 14px;
+        /* align-items: center; */
+    }
+
+    #searchdiv{
+        min-width: 470px;
+        width: 95%;
+        margin: 0px 10px 5px 14px ;
+    }
+    
+    #prof{
+        display: none;
+    }
+    
+    #kategory{
+        padding-left: 3%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    
+    #kategory li{
+        border-radius: 5px;
+        background-color: gainsboro;
+    }
+    #kategory li:hover{
+        border-radius: 5px;
+        background-color: rgb(39, 39, 39);
+        /* text-decoration: underline; */
+        color: white;
+    }
+    #kategory a{
+        padding: 6px;
+        font-weight: 100;
+    }
+    #kategory a:hover{
+        color: white;
+        font-weight: 100;
+    }
+
+    /* ===================================perubahan login================================= */
+    
+}

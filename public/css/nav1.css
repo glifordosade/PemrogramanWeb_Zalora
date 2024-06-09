@@ -1,0 +1,139 @@
+.kepala{
+    background-color: black;
+    display: block;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+}
+
+.navnya{
+    /* background-color: rgb(136, 163, 163); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto auto;
+}
+
+.navnya #mainlog{
+    /* background-color: aqua; */
+    display: inline-block;
+    width: 130px;
+    height: 40px;
+    padding: 5px 0px;
+}
+
+#filler{
+    height: 45px;
+    background-color: white;
+    /* z-index: 99; */
+    /* position: absolute; */
+}
+
+#daftar{
+    display: inline-block;
+}
+
+#daftar li{
+    display: inline-block;
+}
+
+#daftar a{
+    text-decoration: none;
+    color: white;
+    padding: 0px 8px;
+}
+
+#daftar a:hover{
+    /* text-decoration: none; */
+    color: white;
+    text-decoration: underline;
+}
+
+#searchdiv{
+    padding-bottom: 3px;
+    display: inline-block;
+    /* background-color: aquamarine; */
+    position: relative;
+}
+
+#search{
+    height: 23px;
+    width: 400px;
+}
+
+#searchbut{
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    background-color: white;
+    border: 0px;
+    /* opacity: 0.5; */
+}
+
+#searchlog{
+    /* position: absolute; */
+    width: 20px;
+}
+
+.set{
+    display: inline-block;
+    /* background-color: bisque; */
+    min-width: 120px;
+}
+
+.log1o{
+    width: 23px;
+    padding: 0px 8px;
+}
+
+
+#userpil .drop{
+    display: none;
+    position: absolute;
+    font-size: small;
+    /* padding: 10px; */
+    background-color: rgb(247, 247, 247);
+    /* border-radius: 15px; */
+    box-shadow: 2px 3px 10px 2px rgb(152, 152, 152);
+}
+
+#pad{
+    padding: 13px;
+}
+
+.drop #name{
+    background-color: rgb(95, 95, 95);
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    height: 25px;
+    padding-top: 12px;
+    padding-left: 20px;
+    color: white;
+}
+
+.drop a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px 10px;
+}
+.drop a:hover{
+    text-decoration: underline;
+}
+
+#userpil:hover .drop{
+    display: block;
+    width: 250px;
+    top: 40px;
+    position: absolute;
+    /* border-radius: 20px; */
+    right: 100px;
+}
+
+
+#ik{
+    width: 100%;
+}

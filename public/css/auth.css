@@ -1,0 +1,29 @@
+.batang{
+    display: flex;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    justify-content: space-between;
+    font-size: 13px;
+}
+.batang:hover{
+    background-color: rgb(231, 231, 231);
+}
+
+.editor{
+    display: inline-block;
+    /* background-color: aqua; */
+}
+
+.editor a{
+    color: black;
+    text-decoration: none;
+    padding: 5px 8px;
+    border: 1px solid black;
+}
+
+.editor a:hover{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}

@@ -1,0 +1,156 @@
+
+
+#container {
+  width: 320px;
+  margin: 20px auto;
+  padding: 20px 80px 100px 80px;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  background-color: white;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+
+label {
+  display: inline-block;
+  padding-top: 20px;
+  font-weight: 600;
+  color: #757575;
+  font-size: smaller;
+}
+
+#selip{
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
+.alepapan{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 2px;
+  height: 40px;
+}
+
+.kelamin{
+  font-weight: 100;
+  color: #000;
+}
+
+
+.alepapan:focus {
+  outline: none;
+  border: 1px solid rgb(0, 184, 184);
+}
+
+.submit button {
+  transition: background-color .3s, color .2s;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 10px;
+  width: 300px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  letter-spacing: 1px;
+}
+
+.submit button:hover {
+  background-color: white;
+  color: black;
+}
+
+.submit button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit{
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.form-item {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* background-color: aqua; */
+}
+
+
+.form-item label{
+  font-weight: 100;
+  font-size: 0.28cm;
+  color: #000;
+}
+
+.form-item input[type="checkbbox"]:focus{
+  background-color: #000;
+  color: #000;
+}
+
+
+/* terms & condi  */
+
+.box-center-tnc {
+  text-align: center;
+}
+.green-tnc{
+  
+  color: rgb(0, 0, 0);
+}
+
+.terms{
+  font-size: 0.32cm;
+  font-weight: 100;
+  letter-spacing: 0.03cm;
+}
+
+.tang{
+  width: 80px;
+  height: 40px;
+  border: 1px solid #ccc;
+}
+
+
+/* lfaskdjflasjldkfjlasjldfjdfasdhlgahslkddhglkjashldjkfljkasdfllkj;alskdj;flkasj;dlfja;sldflkasdj */
+
+#lupa{
+  display: inline-block;
+  padding-top: 20px;
+  font-size: 0.32cm;
+  color: black;
+}
+
+#pilihan{
+  display: block;
+  height: 50px;
+  /* background-color: antiquewhite; */
+  text-align: center;
+}
+
+#pilihan div{
+  display: inline-block;
+  /* background-color: aqua; */
+  padding: 10px;
+  line-height: 25px;
+  /* border-bottom: 5px solid rgb(32, 32, 117); */
+}
+
+#pilihan a{
+  text-decoration: none;
+  font-weight: 400;
+  color: black;
+}
