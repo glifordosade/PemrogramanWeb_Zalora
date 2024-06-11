@@ -62,7 +62,7 @@
                             <p><?= $_SESSION['pass'];?> <a id="ganti" href="<?= BASEURL;?>/Ganpass">GANTI PASSWORD</a></p>
                         </div>
                         <div class="bio1">
-                            <a href="<?=BASEURL;?>/">UBAH</a>
+                            <a href="<?=BASEURL;?>/Ubahdatakun">UBAH</a>
                         </div>
                     </div>
                 </div>
