@@ -32,7 +32,6 @@ class Authin extends Controller{
 
         if($this->model('cardModel')->Tam($nambar,$harga,$brand,$desc,$kategory,$gambar,$stock)>0){
             header('Location: '.BASEURL.'/Authread');
-            Flasher::setFlash('Barang ditambahkan','ditambahkan','green');
             exit;
         }
 

@@ -1,6 +1,5 @@
 
 <!-- menampilkan notifikasi jika dari kontroller mengirimkan triger notifikasi -->
-<?php Flasher::flash(); ?>
 <div class="isiakun">
     <div class="user">
         <div id="setdiv">ADMIN</div>

@@ -25,7 +25,6 @@ class Authup extends Controller{
         // update jika gambar tidak di update
         if((isset($_POST['subsub'])) && ($_FILES['pic']['tmp_name']==null)){
             $this->model('cardModel')->Ubahbarang($id,$nambar,$harga,$brand,$desc,$kategory,$pic,$stock);
-            Flasher::setFlash('Barang Diubah','ditambahkan','green');
             header('Location: '.BASEURL.'/Authread');
 
         }else if((isset($_POST['subsub'])) && ($_FILES['pic']['tmp_name']!=null)){
@@ -49,7 +48,6 @@ class Authup extends Controller{
                 }
                 
             if($this->model('cardModel')->Ubahbarang($id,$nambar,$harga,$brand,$desc,$kategory,$gambar,$stock)>0){
-                Flasher::setFlash('Barang Diubah','ditambahkan','green');
                 header('Location: '.BASEURL.'/Authread');
             }
         }

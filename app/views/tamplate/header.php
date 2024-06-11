@@ -14,9 +14,7 @@
   <link rel="stylesheet" href="<?= BASEURL;?>/css/home.css">
   <link rel="stylesheet" href="<?= BASEURL;?>/css/wanita.css">
   <link rel="stylesheet" href="<?= BASEURL;?>/css/cart.css">
-  <link rel="stylesheet" href="<?= BASEURL;?>/css/notif.css">
   <link rel="icon" type="image/png" href="<?= BASEURL;?>/img/favicon.png">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <title><?= $data['title'];?></title>
 </head>
 <body>

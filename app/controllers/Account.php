@@ -15,7 +15,6 @@ class Account extends Controller{
         $user['log'] = $this->model('userModel')->login($email,$pass);
 
         if($user['log']==NULL){
-            Flasherf::setFlashf('Email atau Password anda salah','salah', 'indianred');
             $data['title'] = 'Masuk';
             $this->view('tamplate/header1', $data);
             $this->view('Regist/pelma');

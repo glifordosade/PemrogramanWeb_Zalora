@@ -59,7 +59,7 @@
                             <p><?= $_SESSION['user'];?></p>
                             <p><?= $_SESSION['email'];?></p>
                             <p><?= $_SESSION['ttl'];?></p>
-                            <p><?= $_SESSION['pass'];?> <a id="ganti" href="">GANTI PASSWORD</a></p>
+                            <p><?= $_SESSION['pass'];?> <a id="ganti" href="<?= BASEURL;?>/Ganpass">GANTI PASSWORD</a></p>
                         </div>
                         <div class="bio1">
                             <a href="<?=BASEURL;?>/">UBAH</a>
@@ -154,10 +154,10 @@
                                 <p><?= $_SESSION['user'];?></p>
                                 <p><?= $_SESSION['email'];?></p>
                                 <p><?= $_SESSION['ttl'];?></p>
-                                <p><?= $_SESSION['pass'];?> <a id="ganti" href="">GANTI PASSWORD</a></p>
+                                <p><?= $_SESSION['pass'];?> <a id="ganti" href="<?=BASEURL;?>/Ganpass">GANTI PASSWORD</a></p>
                             </div>
                             <div id="bio1">
-                                <a href="<?=BASEURL;?>/">UBAH</a>
+                                <a href="<?=BASEURL;?>/Ubahdatakun">UBAH</a>
                             </div>
                         </div>
                     </div>
