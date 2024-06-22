@@ -15,8 +15,6 @@
                 <img class="picdiskon" src="<?= BASEURL;?>/img/diskon.png" alt="">
             </div>
             
-
-            
                 <form action="<?=BASEURL;?>/Bag/cart" method="POST">
                     <div class="brandescr">
                         <h1 class="price">Ukuran</h1>
@@ -49,11 +47,11 @@
 
             <div class="brandescr">
                 <h1 class="price">Mengapa anda akan suka belanja di ZALORA</h1>
-                <img style="width: 600px;" class="picdiskon" src="<?= BASEURL;?>/img/ulasan.png" alt="">
+                <img style="width: 500px;" class="picdiskon" src="<?= BASEURL;?>/img/ulasan.png" alt="">
             </div>
             <div class="brandescr">
                 <h1 class="price">Ulasan & Penilaian</h1>
-                <img style="width: 600px;" class="picdiskon" src="<?= BASEURL;?>/img/nilai.png" alt="">
+                <img style="width: 550px;" class="picdiskon" src="<?= BASEURL;?>/img/nilai.png" alt="">
             </div>
         </div>
     </div>
