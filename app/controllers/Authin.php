@@ -1,6 +1,5 @@
 <?php
 class Authin extends Controller{
-
     // menampilkan halaman tambah barang
     public function index(){
         $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
@@ -35,7 +34,6 @@ class Authin extends Controller{
 
         if($this->model('cardModel')->Tam($nambar,$harga,$brand,$desc,$kategory,$gambar,$stock,$size)>0){
             header('Location: '.BASEURL.'/Authread');
-            Flasher::setFlash('Barang ditambahkan','ditambahkan','green');
             exit;
         }
 

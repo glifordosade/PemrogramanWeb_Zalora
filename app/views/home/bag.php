@@ -11,7 +11,6 @@
             <?php foreach($data['isibag'] as $it):?>
                 
             <?php endforeach;?>
-
         <?php } ?>
     </div>
     <div class="main">
