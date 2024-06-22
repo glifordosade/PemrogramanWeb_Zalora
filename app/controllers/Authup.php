@@ -3,6 +3,8 @@ class Authup extends Controller{
 
     // tampilan halaman update
     public function index($id){
+        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+        $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
         $data['nambar'] = $this->model('cardModel')->PerId($id);
         $data['title'] = 'Edit Barang';
         $this->view('tamplate/header1', $data );
@@ -21,11 +23,16 @@ class Authup extends Controller{
         $stock =$_POST['stock'];
         $id =$_POST['idbar'];
         $pic =$_POST['pic'];
+        $size =$_POST['size'];
 
         // update jika gambar tidak di update
         if((isset($_POST['subsub'])) && ($_FILES['pic']['tmp_name']==null)){
+<<<<<<< Updated upstream
             $this->model('cardModel')->Ubahbarang($id,$nambar,$harga,$brand,$desc,$kategory,$pic,$stock);
             Flasher::setFlash('Barang Diubah','ditambahkan','green');
+=======
+            $this->model('cardModel')->Ubahbarang($id,$nambar,$harga,$brand,$desc,$kategory,$pic,$stock,$size);
+>>>>>>> Stashed changes
             header('Location: '.BASEURL.'/Authread');
 
         }else if((isset($_POST['subsub'])) && ($_FILES['pic']['tmp_name']!=null)){

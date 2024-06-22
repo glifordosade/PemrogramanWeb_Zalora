@@ -2,6 +2,7 @@
 // kontroller untuk menampilkan halaman utama pengaturan akun
 class Account extends Controller{
     public function index(){
+        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
         $data['title'] = 'Akun Saya';
         $this->view('tamplate/header1', $data);
         $this->view('akun/account');

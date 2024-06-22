@@ -72,15 +72,15 @@
         <!-- menampilkan hasil dari pencarian user -->
         <div class="barang">
             <?php foreach($data['barang'] as $it):?>
-            <a href="<?= BASEURL;?>/Main/Detail/<?= $it['Id_Barang'] ?>" class="cardd">
-                <img class="carddis" src="<?= BASEURL."/gambar/".$it['Pic']?>" alt="">
+            <a class="cardd" href="<?= BASEURL;?>/Main/Detail/<?= $it['Id_Barang'] ?>" >
+                <img class="cardimage" src="<?= BASEURL."/gambar/".$it['Pic']?>" alt="">
                 <div>
                     <div class="bris">
-                        <h6 class="brand"><?= $it['Brand']?></h6>
-                        <img  src="" alt="">
+                        <span class="brand"><?= $it['Brand']?></span>
+                        <!-- <button><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></button> -->
                     </div>
                     <h6 class="deskripsi"><?= $it['Descr']?></h6>
-                    <h6 class="harga">Rp <?= $it['Harga']?></h6>
+                    <h6 class="harga">Rp <?= number_format($it['Harga'],0,",",".");?></h6>
                 </div>
                 <!-- <a href="">Masukkan ke Tas</a> -->
             </a>

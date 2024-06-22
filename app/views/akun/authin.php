@@ -59,7 +59,9 @@
                         <textarea class="alepapan" name="kategory" placeholder="Kategory barang" require></textarea><br><br>
                         <label for="">Gambar</label>
                         <input class="tombol" type="file" name="pic" accept="image/*" require><br>
-                        <label for="">Nama Barang</label>
+                        <label for="">Ukuran</label>
+                        <input class="alepapan" type="text" name="size" placeholder="format ex: S,L,M,XL, atau 32,33,40," require><br><br>
+                        <label for="">Stock</label>
                         <input class="alepapan" type="number" name="stock" placeholder="Stock Barang" require><br><br>
                         <input class="tombol" type="submit" name="submit">
                     </form>

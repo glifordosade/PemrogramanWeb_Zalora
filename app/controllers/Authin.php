@@ -3,6 +3,8 @@ class Authin extends Controller{
 
     // menampilkan halaman tambah barang
     public function index(){
+        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+        $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
         $data['title'] = 'Tambah Barang';
         $this->view('tamplate/header1', $data );
         $this->view('akun/authin',);
@@ -17,6 +19,7 @@ class Authin extends Controller{
         $desc =$_POST['Desc'];
         $kategory =$_POST['kategory'];
         $stock =$_POST['stock'];
+        $size =$_POST['size'];
         // file gambar
 
         $gambar = $this->upload();
@@ -30,7 +33,7 @@ class Authin extends Controller{
         }
 
 
-        if($this->model('cardModel')->Tam($nambar,$harga,$brand,$desc,$kategory,$gambar,$stock)>0){
+        if($this->model('cardModel')->Tam($nambar,$harga,$brand,$desc,$kategory,$gambar,$stock,$size)>0){
             header('Location: '.BASEURL.'/Authread');
             Flasher::setFlash('Barang ditambahkan','ditambahkan','green');
             exit;

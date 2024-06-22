@@ -7,7 +7,7 @@ class registModel{
     }
 
     public function regist($nama, $email, $pass, $gender, $ttl){
-        $query="INSERT INTO user (ID, Email, FirstName, Password, Gender, TanggalLahir) VALUES(UUID_SHORT(),:email,:username,:password, :gender,:TanggalLahir)";
+        $query="INSERT INTO user(ID, Email, FirstName, Password, Gender, TanggalLahir) VALUES(UUID_SHORT(),:email,:username,:password, :gender,:TanggalLahir)";
         $this->db->Query($query);
         $this->db->Bind('email',$email);
         $this->db->Bind('username',$nama);

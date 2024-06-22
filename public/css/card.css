@@ -4,7 +4,6 @@
 .main{
     /* background-color: aqua; */
     display: flex;
-    /* flex-wrap: nowrap;     */
     max-width: 1200px;
     margin: 0px auto;
 }
@@ -30,6 +29,9 @@
 }
 
 
+/* mengatur kartu barang pada halaman pencarian  */
+
+
 
 .barang{
     display: grid;
@@ -51,7 +53,7 @@
 }
 
 
-.carddis{
+.cardimage{
     display: inline-block;
     object-fit: cover;
     padding: 5px;
@@ -80,6 +82,71 @@
     color: rgb(192, 3, 3);
 }
 
-/* .bris{
+.bris{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+    width: 100%;
+}
+
+.logshield{
+    /* background-color: aqua; */
     display: inline-block;
-} */
+    line-height: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.loggo{
+    width: 30px;
+    line-height: 20px;
+}
+
+
+/* tombol untk pembelian */
+.linkks{
+    transition: background-color .3s, color .2s;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 10px;
+    width: 300px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    
+}
+
+.linkks:hover{
+    background-color: white;
+    color: black;
+}
+
+.linkknot{
+    color: gray;
+    background-color: #b2b2b2;
+    border: 1px solid #b2b2b2;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+    font-size: 12px;
+    line-height: 10px;
+    width: 300px;
+    cursor: default;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 12px;
+}
+

@@ -59,14 +59,14 @@
                         <label for="">Gambar</label><br>
                         <img class="gambarKecil" src="<?= BASEURL."/gambar/".$data['nambar']['Pic'];?>" alt=""><br>
                         <input class="tombol" type="file" name="pic" accept="image/*" require><br>
+                        <label for="">Ukuran</label>
+                        <input class="alepapan" type="text" name="size" value="<?=$data['nambar']['Size']; ?>" placeholder="format ex: S,L,M,XL, atau 32,33,40," require><br><br>
                         <label for="">Stock</label>
-                        <input class="alepapan" type="number" name="stock" value="<?=$data['nambar']['Stock'];?>" placeholder="Stock Barang" require><br><br>
 
                         <!-- nilai kosong -->
+                        <input class="alepapan" type="number" name="stock" value="<?=$data['nambar']['Stock'];?>" placeholder="Stock Barang" require><br><br>
                         <input style="display: none;" type="text" name="idbar" value="<?=$data['nambar']['Id_Barang']; ?>">
                         <input style="display: none;" type="text" name="pic" value="<?=$data['nambar']['Pic'];?>"><br>
-                        <!-- end nilai kosong -->
-
                         <input class="tombol" type="submit" name="subsub">
                     </form>
                 </div>

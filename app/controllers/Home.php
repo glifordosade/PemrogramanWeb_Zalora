@@ -2,6 +2,10 @@
 class Home extends Controller{
     // menampilakn halaman home atau index dari website
     public function index(){
+        if(isset($_SESSION['id'])){
+            $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+            $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+        }
         $data['title'] = 'Home';
         // $data['isi'] = $this->model('userModel')->();
         $this->view('tamplate/header', $data);

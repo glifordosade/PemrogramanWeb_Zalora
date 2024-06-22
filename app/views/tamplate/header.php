@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="<?= BASEURL;?>/css/home.css">
   <link rel="stylesheet" href="<?= BASEURL;?>/css/wanita.css">
   <link rel="stylesheet" href="<?= BASEURL;?>/css/cart.css">
+<<<<<<< Updated upstream
   <link rel="stylesheet" href="<?= BASEURL;?>/css/notif.css">
+=======
+  <link rel="stylesheet" href="<?= BASEURL;?>/css/detail.css">
+>>>>>>> Stashed changes
   <link rel="icon" type="image/png" href="<?= BASEURL;?>/img/favicon.png">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
   <title><?= $data['title'];?></title>
@@ -29,6 +33,7 @@
           <!-- form untuk melakukan pencarian pada barang -->
         <form action="<?= BASEURL;?>/Main" method="POST" id="searchdiv">
           <input id="search" type="text" placeholder="New Balance Up to 40%" name="pencarian">
+          <input id="search" type="search" placeholder="New Balance Up to 40%" name="cari">
           <button id="searchbut" name="search"><img id="searchlog" src="/img/search.png" alt=""></button>
         </form>
         <div id="prof">
@@ -65,14 +70,24 @@
           </div>
 
           <a href="<?= BASEURL;?>/Wish/index/<?php if(isset($_SESSION['id'])!=null){ echo $_SESSION['id'];}?>"><img class="log1o" src="<?= BASEURL;?>/img/wishlist.png" alt="wishlist"></a>
+          <a href="<?= BASEURL;?>/Wish"><img class="log1o" src="<?= BASEURL;?>/img/wishlist.png" alt="wishlist"></a>
+          <?php if(isset($_SESSION['id'])AND($data['wish']>0)){?>
+            <span class="notifsum"><?= $data['wish'];?></span>
+          <?php } ?>
           <span id="bag">
             <a href="<?= BASEURL;?>/Bag"><img class="log1o" src="<?= BASEURL;?>/img/bag.png" alt="bag"></a>
+            <?php if(isset($_SESSION['id'])AND($data['bag']>0)){?>
+              <span class="notifsum"><?= $data['bag'];?></span>
+            <?php } ?>
                 <div id="isitas">
                   <div id="padpad">
                     <img id="loggg" src="<?= BASEURL;?>/img/bagg.png" alt="">
                     <h3 id="bold">Your Bag is empt</h3>
                     <p id="thin">Start filling it up with yout favourites</p>
                     <a id="linkk" href="">See What`s New</a>
+                    <h3 class="bold">Your Bag is empty</h3>
+                    <p class="thin">Start filling it up with your favourites</p>
+                    <a class="linkk" href="<?= BASEURL?>">See What`s New</a>
                   </div>
                 </div>
           </span>
@@ -90,6 +105,7 @@
         <li><a href="<?php BASEURL;?>/Beauty">Beauty</a></li>
         <li><a href="<?php BASEURL;?>/Livestyle">Home&Livestyle</a></li>
       </ul>
+      
     </div>
   </header>
   <div id="filler"></div>

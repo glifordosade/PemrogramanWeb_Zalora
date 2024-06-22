@@ -1,68 +1,80 @@
 
 <!-- halaman untuk menampilkan detail dari barang yang dipilih -->
 <div class="putih">
-    <div class="container">
-            <div class="left-section">
-                <div class="product-images">
-                    <img src="<?= BASEURL."/gambar/".$data['barang']['Pic']?>" alt="Product Image 1">
-                </div>
+    <div class="main">
+        <div class="imageshield">
+            <img class="picdetail" src="<?= BASEURL;?>/gambar/<?= $data['barang']['Pic'];?>" alt="">
+        </div>
+        <div class="legendary">
+            <div class="brandescr">
+                <h1 class="Brandetail"><?= $data['barang']['Brand'];?></h1>
+                <p><?= $data['barang']['Descr'];?></p>
             </div>
-            <div class="right-section">
-                <div class="product-info">
-                    <h1 class="brand"><?= $data['barang']['Brand'] ?></h1>
-                    <h1 class="desc"><?= $data['barang']['Descr'] ?></h1>
-                    <p class="price">Rp <?= $data['barang']['Harga'] ?> </p>
-                    <p class="availability">In Stock</p>
-                    <div class="variations">
-                        <label for="color">Color:</label>
-                        <select id="color" name="color">
-                            <option value="black">Black</option>
+            <div class="brandescr">
+                <h1 class="price">Rp <?= number_format($data['barang']['Harga'],0, ',', '.');?></h1>
+                <img class="picdiskon" src="<?= BASEURL;?>/img/diskon.png" alt="">
+            </div>
+            
+
+            
+                <form action="<?=BASEURL;?>/Bag/cart" method="POST">
+                    <div class="brandescr">
+                        <h1 class="price">Ukuran</h1>
+                        <?php
+                            $b = strval($data['barang']['Size']);
+                            $arr = explode(",", $b);
+                        ?>
+                        <select class="ukurandetail" name="size">
+                        <?php foreach ($arr as $a) {?>
+                            <option value="<?= $a?>"><?= $a?></option>
+                        <?php } ?>
                         </select>
                     </div>
-                    <div class="size">
-                        <label for="size">Size:</label>
-                        <select id="size" name="size">
-                            <option value="38">38</option>
-                            <option value="39">39</option>
-                            <option value="40">40</option>
-                            <option value="41">41</option>
-                            <option value="42">42</option>
-                            <option value="43">43</option>
-                            <option value="44">44</option>
-                        </select>
+                    <div class="brandescr">
+                    <!-- menentukan apakah barang telah di masukkan ke keranjang atau belum -->
+                    <?php if($data['cekbag']!=1) {?>
+                        <button class="linkks" type="submit" name="barang" value="<?= $data['barang']['Id_Barang'];?>">Masukkan ke Tas</button>
+                    <?php }else{?>
+                        <div class="linkknot" >Masukkan ke Tas</div>
+                    <?php }?>
+
+                <!-- menentukan apakah barang telah di masukkan ke wishlist atau belum -->
+                    <?php if($data['cekwish']!=1) {?>
+                        <a class="logshield" href="<?= BASEURL;?>/Wish/tambWish/<?= $data['barang']['Id_Barang'];?>"><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></a>
+                    <?php }else{?>
+                        <a class="logshield" href="<?= BASEURL;?>/Wish/hapusdetail/<?= $data['barang']['Id_Barang'];?>"><img class="loggo" src="<?= BASEURL;?>/img/love.png" alt=""></a>
+                    <?php }?>
                     </div>
-                    <div class="actions">
-                        <a href="cart.html" class="add-to-cart">Add to Cart</a>
-                        <a href="<?= BASEURL;?>/" class="favorite"><i class="fas fa-heart"></i></a>
-                    </div>
-                </div>
-                <div class="product-description">
-                    <h2>Product Information</h2>
-                    <p>Material: Canvas</p>
-                    <p>Material Sole: Rubber</p>
-                    <h3>Customer Reviews</h3>
-                    <div class="rating" id="rating">
-                        <span class="fa fa-star" data-index="0"></span>
-                        <span class="fa fa-star" data-index="1"></span>
-                        <span class="fa fa-star" data-index="2"></span>
-                        <span class="fa fa-star" data-index="3"></span>
-                        <span class="fa fa-star" data-index="4"></span>
-                    </div>
-                    <p id="review-count">Based on 0 reviews</p>
-                    <ul>
-                        <li>Comfortable</li>
-                        <li>Stylish</li>
-                        <li>Good quality</li>
-                    </ul>
-                </div>
-                <div class="payment-method">
-                    <h2>Payment Methods</h2>
-                    <ul>
-                        <li><i class="fas fa-credit-card"></i> Credit Card</li>
-                        <li><i class="fas fa-paypal"></i> PayPal</li>
-                        <li><i class="fas fa-wallet"></i> Cash on Delivery</li>
-                    </ul>
-                </div>
+                </form>
+
+            <div class="brandescr">
+                <h1 class="price">Mengapa anda akan suka belanja di ZALORA</h1>
+                <img style="width: 600px;" class="picdiskon" src="<?= BASEURL;?>/img/ulasan.png" alt="">
+            </div>
+            <div class="brandescr">
+                <h1 class="price">Ulasan & Penilaian</h1>
+                <img style="width: 600px;" class="picdiskon" src="<?= BASEURL;?>/img/nilai.png" alt="">
             </div>
         </div>
+    </div>
+    <div class="main">
+        <div class="barang">
+            <h3 class="bold fontsize">Rekomendasi untuk Anda</h3>
+            <?php foreach($data['barang'] as $it):?>
+            <a href="<?= BASEURL;?>/Main/Detail/<?= $it['Id_Barang'] ?>" class="cardd">
+                <img class="carddis" src="<?= BASEURL."/gambar/".$it['Pic']?>" alt="">
+                <div>
+                    <div class="bris">
+                        <h6 class="brand"><?= $it['Brand']?></h6>
+                        <img  src="" alt="">
+                    </div>
+                    <h6 class="deskripsi"><?= $it['Descr']?></h6>
+                    <h6 class="harga">Rp <?= $it['Harga']?></h6>
+                </div>
+                <!-- <a href="">Masukkan ke Tas</a> -->
+            </a>
+            <?php endforeach;?>
+            
+        </div>
+    </div>
 </div>

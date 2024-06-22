@@ -31,7 +31,7 @@
             </ul>
             <!-- form untuk melakukan pencarian pada barang -->
             <form action="<?= BASEURL;?>/Main" method="POST" id="searchdiv">
-                <input id="search" type="text" placeholder="New Balance Up to 40%" name="pencarian">
+                <input id="search" type="text" placeholder="New Balance Up to 40%" name="cari">
                 <button id="searchbut" name="search"><img id="searchlog" src="/img/search1.png" alt=""></button>
             </form>
             <div class="set">
@@ -71,8 +71,8 @@
                       </div>
                     </ul><?php endif?>
                     </span>
-                <a href="<?= BASEURL;?>"><img class="log1o" src="<?= BASEURL;?>/img/wishput.svg" alt="wishlist"></a>
-                <a href="<?= BASEURL;?>"><img class="log1o" src="<?= BASEURL;?>/img/bagput.svg" alt="bag"></a>
+                <a href="<?= BASEURL;?>/Wish"><img class="log1o" src="<?= BASEURL;?>/img/wishput.svg" alt="wishlist"></a>
+                <a href="<?= BASEURL;?>/Bag"><img class="log1o" src="<?= BASEURL;?>/img/bagput.svg" alt="bag"></a>
             </div>
         </nav>
     </header>
