@@ -19,7 +19,7 @@
         <input class="alepapan" type="password" name="password"><br><br>
 
         <?php if(isset($data['data'])AND ($data['data']!=null)){?>
-            <h1 class="merah">Email atau Password salah</h1>
+            <h2 class="merah">Email atau Password salah</h2>
         <?php }?>
         
         <a href="#" id="lupa">lupa Password</a>

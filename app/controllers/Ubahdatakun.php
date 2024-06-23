@@ -1,7 +1,7 @@
 <?php
 class Ubahdatakun extends Controller{
     // menampilkan form untuk perubahan Password
-    public function index(){
+    public function index($a=null){
         if(isset($_SESSION['id'])){
             $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
             $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
@@ -9,6 +9,7 @@ class Ubahdatakun extends Controller{
             $data['rek'] = $this->model('cardModel')->random();
         }
         $data['title'] = 'Ubah Password';
+        $data['data'] = $a;
         $data['userdat'] = $this->model('userModel')->Alldata($_SESSION['id']);
         $this->view('tamplate/header1', $data);
         $this->view('akun/ubahpass',$data);
@@ -35,13 +36,15 @@ class Ubahdatakun extends Controller{
         $cekpass = $this->model('userModel')->cekPass($id,$passlama);
 
         if(($cekpass==1)AND($pass1==$pass2)){
-            if($this->model('userModel')->updateUser($id,$email,$fname,$lname,$pass1,$gender,$phone,$ttl,$Alamat,$pos)){
+            if($this->model('userModel')->updateUser($id,$email,$fname,$lname,$pass1,$gender,$phone,$ttl,$Alamat,$pos)>0){
                 header("Location: ".BASEURL."/Account");
             }else{
-                header("Location: ".BASEURL."/Ubahdatakun");
+                $note['data'] = '1';
+                header("Location: ".BASEURL."/Ubahdatakun/index/".$note['data']);
             }
         }else{
-            header("Location: ".BASEURL."/Ubahdatakun");
+            $note['data'] = '1';
+            header("Location: ".BASEURL."/Ubahdatakun/index/".$note['data']);
         }
     }
 
@@ -50,13 +53,14 @@ class Ubahdatakun extends Controller{
         $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
         $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
 
-        $data['title'] = 'Ubah Password';
+        $data['title'] = 'Ubah Biodata';
         $data['userdat'] = $this->model('userModel')->Alldata($_SESSION['id']);
         $this->view('tamplate/header1', $data);
         $this->view('akun/ubahdata',$data);
         $this->view('tamplate/footer');
     }
 
+    // untuk update data user
     public function Datauser(){
         $email = $_POST['email'];
         $fname = $_POST['fname'];
@@ -79,6 +83,7 @@ class Ubahdatakun extends Controller{
         }
     }
 
+    // untuk update alamat user
     public function alamat(){
         $email = $_POST['email'];
         $fname = $_POST['fname'];

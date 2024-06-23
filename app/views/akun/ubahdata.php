@@ -67,7 +67,7 @@
 
 
 
-                        <label class="bold">Email</label><br><br>
+                        <label class="bold">Email</label><br>
                         <h2 class="bold"><?= $data['userdat']['Email']?></h2>
                         
                         <label for="">Gender</label>

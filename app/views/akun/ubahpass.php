@@ -68,6 +68,9 @@
 
                         <!-- form kosong -->
 
+                        <?php if(isset($data['data'])AND ($data['data']!=null)){?>
+                            <h2 class="merah">Password salah atau konfirmasi password berbeda</h2>
+                        <?php }?>
                         <label for="">Password Lama</label>
                         <input class="alepapan" type="password" name="passlama" placeholder="Pasword Lama" require><br>
                         <label for="">Passsword Baru</label>

@@ -39,6 +39,7 @@ class userModel{
         return $this->db->rowCount();
     }
 
+    // mealakukan update pada data user
     public function updateUser($id,$email,$fname,$lname,$pass,$gender,$phone,$ttl,$Alamat,$pos){
         $this->db->Query("UPDATE user SET Email = :email, FirstName = :fname, LastName = :lname, Password = :pass, Gender = :gender, Telephone = :phone, TanggalLahir = :ttl, Alamat = :alamat, KodePos = :pos WHERE ID = :id");
         $this->db->Bind('id',$id);
