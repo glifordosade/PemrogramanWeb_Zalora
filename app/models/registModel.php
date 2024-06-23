@@ -6,6 +6,7 @@ class registModel{
         $this->db= new Database;
     }
 
+    // sql untuk melakukan registrasi pada user yang belum memiliki akun
     public function regist($nama, $email, $pass, $gender, $ttl){
         $query="INSERT INTO user(ID, Email, FirstName, Password, Gender, TanggalLahir) VALUES(UUID_SHORT(),:email,:username,:password, :gender,:TanggalLahir)";
         $this->db->Query($query);

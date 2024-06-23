@@ -18,7 +18,26 @@
         <span class="dot" onclick="currentSlide(1, 0)"></span> 
         <span class="dot" onclick="currentSlide(2, 0)"></span> 
     </div>
-<br><br>
+<br><br><br>
+
+    <div class="bold fontsize">Temuan Teratas & Penawaran Menarik dalam Kategori Anda</div>
+    <div class="main">
+        <?php foreach($data['rek'] as $ss):?>
+                <div class="cardlist">
+                    <a class="cardd" href="<?= BASEURL;?>/Main/Detail/<?= $ss['Id_Barang'] ?>" >
+                        <img class="cardimage" src="<?= BASEURL."/gambar/".$ss['Pic']?>" alt="">
+                        <div class="hades">
+                            <div class="bris">
+                                <span class="brand"><?= $ss['Brand']?></span>
+                                <!-- <button><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></button> -->
+                            </div>
+                            <h6 class="deskripsi"><?= $ss['Descr']?></h6>
+                            <h6 class="harga">Rp <?= number_format($ss['Harga'],0,",",".");?></h6>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach;?>
+    </div><br><br>
     <!-- Promo Images -->
 
     <div class="promo-section">
@@ -42,6 +61,26 @@
     </div>
 
     <br></br>
+
+
+    <div class="bold fontsize">Temuan Teratas & Penawaran Menarik dalam Kategori Anda</div>
+    <div class="main">
+        <?php foreach($data['rek'] as $ss):?>
+                <div class="cardlist">
+                    <a class="cardd" href="<?= BASEURL;?>/Main/Detail/<?= $ss['Id_Barang'] ?>" >
+                        <img class="cardimage" src="<?= BASEURL."/gambar/".$ss['Pic']?>" alt="">
+                        <div class="hades">
+                            <div class="bris">
+                                <span class="brand"><?= $ss['Brand']?></span>
+                                <!-- <button><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></button> -->
+                            </div>
+                            <h6 class="deskripsi"><?= $ss['Descr']?></h6>
+                            <h6 class="harga">Rp <?= number_format($ss['Harga'],0,",",".");?></h6>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach;?>
+    </div><br><br>
     <!-- Slideshow 2 -->
     <div class="slideshow-container" id="slideshow2"> 
         <div class="mySlides2 fade">
@@ -59,5 +98,5 @@
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide1(1, 0)"></span> 
         <span class="dot" onclick="currentSlide1(2, 0)"></span> 
-    </div>
+    </div><br><br><br>
 </div>

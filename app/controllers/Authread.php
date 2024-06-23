@@ -24,7 +24,6 @@ class Authread extends Controller{
             var_dump($namaGambar);
 	    }
         $dat['barang'] = $this->model('cardModel')->Hapus($ID);
-        Flasher::setFlash('Barang dihapus','hapus','red');
         header("Location: ".BASEURL."/Authread");
     
     }

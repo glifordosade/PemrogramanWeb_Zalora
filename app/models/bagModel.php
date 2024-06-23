@@ -18,7 +18,7 @@ class bagModel{
 
     // menampilkan isi dari keranjang
     public function show($id){
-        $this->db->Query("SELECT barang.Brand,barang.Descr,barang.Harga,barang.Pic,barang.Id_Barang,keranjang.Id_Keranjang
+        $this->db->Query("SELECT barang.Brand,barang.Descr,barang.Harga,barang.Pic,keranjang.Size,barang.Id_Barang,barang.Stock,keranjang.Id_Keranjang
                                 FROM barang LEFT JOIN keranjang 
                                 ON barang.Id_Barang = keranjang.Id_barang 
                                 WHERE keranjang.Id_user = :id");
@@ -27,7 +27,9 @@ class bagModel{
         return $this->db->resultset();
     }
 
-    public function Hapusbag($idbarang){
-
+    public function Hapus($ID){
+        $this->db->Query("DELETE FROM keranjang WHERE Id_Keranjang=:id");
+        $this->db->bind('id',$ID);
+        return $this->db->single();
     }
 }

@@ -3,9 +3,13 @@ class Wish extends Controller{
     public function index()
     // menampilkan halaman wishlist
     {
-        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
-        $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
-        $data['isiwish'] = $this->model('wishModel')->show($_SESSION['id']);
+        if(isset($_SESSION['id'])){
+            $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+            $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+            $data['isiwish'] = $this->model('wishModel')->show($_SESSION['id']);
+        }else{
+            $data['rek'] = $this->model('cardModel')->random1();
+        }
         $data["title"] = 'Wishlist';
         // var_dump($data['isiwish']);
         $this->view('tamplate/header', $data);

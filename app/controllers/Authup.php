@@ -3,8 +3,12 @@ class Authup extends Controller{
 
     // tampilan halaman update
     public function index($id){
-        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
-        $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+        if(isset($_SESSION['id'])){
+            $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+            $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+        }else{
+            $data['rek'] = $this->model('cardModel')->random();
+        }
         $data['nambar'] = $this->model('cardModel')->PerId($id);
         $data['title'] = 'Edit Barang';
         $this->view('tamplate/header1', $data );

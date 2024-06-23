@@ -2,8 +2,12 @@
 
 class Regist extends Controller{
     public function index(){
-        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
-        $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+        if(isset($_SESSION['id'])){
+            $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+            $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+        }else{
+            $data['rek'] = $this->model('cardModel')->random();
+        }
         // menampilkan halaman registrasi untuk user baru
         $data['title'] = 'Zalora | Registrasi';
         $this->view('tamplate/header1',$data);

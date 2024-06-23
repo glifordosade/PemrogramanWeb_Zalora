@@ -2,10 +2,10 @@
 // kontroller untuk menampilkan halaman utama pengaturan akun
 class Account extends Controller{
     public function index(){
-        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+        $data['userdat'] = $this->model('userModel')->Alldata($_SESSION['id']);
         $data['title'] = 'Akun Saya';
         $this->view('tamplate/header1', $data);
-        $this->view('akun/account');
+        $this->view('akun/account',$data);
         $this->view('tamplate/footer');
     }
 
@@ -16,7 +16,6 @@ class Account extends Controller{
         $user['log'] = $this->model('userModel')->login($email,$pass);
 
         if($user['log']==NULL){
-            Flasherf::setFlashf('Email atau Password anda salah','salah', 'indianred');
             $data['title'] = 'Masuk';
             $this->view('tamplate/header1', $data);
             $this->view('Regist/pelma');

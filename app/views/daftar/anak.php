@@ -10,7 +10,7 @@
             <a href=""><img class="bulatan" src="<?= BASEURL;?>/img/tujuh.png" alt="gambar"></a>
             <a href=""><img class="bulatan" src="<?= BASEURL;?>/img/delapan.png" alt="gambar"></a>
         </div>
-    </div>
+    </div><br><br>
     <div class="main">
         <div>
             <div class="slideshow-container" id="slideshow1">
@@ -31,7 +31,7 @@
                 <span class="dot" onclick="currentSlide(2, 0)"></span> 
             </div>
         </div>
-    </div>
+    </div><br><br>
     <div class="main">
         <div>
             <!-- Slideshow 2 -->
@@ -53,5 +53,5 @@
                 <span class="dot" onclick="currentSlide1(2, 0)"></span> 
             </div>
         </div>
-    </div>
+    </div><br><br>
 </div>

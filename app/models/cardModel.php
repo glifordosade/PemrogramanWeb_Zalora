@@ -75,6 +75,63 @@ class cardModel{
     
     }
 
+    // rekomendasi
+    public function rek($gen){
+        $this->db->Query("SELECT * FROM barang WHERE kategory LIKE :id LIMIT 4");
+        $this->db->bind('id','%'.$gen.'%');
+        return $this->db->resultset();
+    
+    }
+
+
+    // rekomendasi random
+    public function random(){
+        $this->db->Query("SELECT * FROM barang ORDER BY RAND() LIMIT 4");
+        return $this->db->resultset();
+    
+    }
+    // rekomendasi random1
+    public function random1(){
+        $this->db->Query("SELECT * FROM barang ORDER BY RAND() LIMIT 8");
+        return $this->db->resultset();
+    
+    }
+
+    // rekomendasi random wanitia
+    public function ranwanita(){
+        $this->db->Query("SELECT * FROM barang WHERE kategory LIKE '%wanita%' OR '%perempuan%' ORDER BY RAND() LIMIT 4");
+        return $this->db->resultset();
+    
+    }
+
+    // rekomendasi random pria
+    public function ranpria(){
+        $this->db->Query("SELECT * FROM barang WHERE kategory LIKE '%pria%' OR '%laki-laki%' OR '%laki%' ORDER BY RAND() LIMIT 4");
+        return $this->db->resultset();
+    
+    }
+
+    // rekomendasi random sport
+    public function ransport(){
+        $this->db->Query("SELECT * FROM barang WHERE kategory LIKE '%sport%' OR '%olahraga%' OR '%raga%' OR '%olah%' ORDER BY RAND() LIMIT 4");
+        return $this->db->resultset();
+    
+    }
+    // rekomendasi random anak
+    public function rananak(){
+        $this->db->Query("SELECT * FROM barang WHERE kategory LIKE '%anak%' OR '%kid%' OR '%child%' ORDER BY RAND() LIMIT 4");
+        return $this->db->resultset();
+    
+    }
+    // rekomendasi random luxury
+    public function ranlux(){
+        $this->db->Query("SELECT * FROM barang WHERE kategory LIKE '%lux%' OR '%wanita%' OR '%jewel%' OR '%cincin%' OR '%kalung%'OR '%perhiasan%'  ORDER BY RAND() LIMIT 4");
+        return $this->db->resultset();
+    
+    }
+   
+
+    // sql untuk melakukan perubahan data pada barang (update)
     public function Ubahbarang($id, $nambar, $harga, $brand, $desc, $kategory, $pic, $stock,$size){
         $this->db->Query("UPDATE barang SET nambar = :nambar, Harga = :harga, Brand = :brand, Descr = :descr, kategory = :kategory, Pic = :pic, Stock = :stock, Size = :ukuran WHERE Id_Barang = :id");
         $this->db->bind('id',$id);
@@ -89,7 +146,7 @@ class cardModel{
         $this->db->execute();
     }
 
-
+    // sql untuk menambah barang baru
     public function Tam($nambar, $harga, $brand,$desc,$kategory,$pic,$stock,$size){
         $this->db->Query("INSERT INTO barang(Id_Barang,nambar, Harga, Brand, Descr, kategory, Pic, Stock, Size) VALUES(UUID_SHORT(), :nambar, :harga, :brand, :descr, :kategory, :pic ,:stock, :ukuran) ");
         $this->db->bind('nambar',$nambar);
@@ -104,6 +161,7 @@ class cardModel{
         return $this->db->rowCount();
     }
 
+    // sql untuk menampilkan gambar dari id barang tertentu
     public function Gambar($id){
         $this->db->Query("SELECT Pic FROM barang WHERE Id_Barang = :id");
         $this->db->bind('id',$id);

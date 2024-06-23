@@ -1,7 +1,7 @@
 <!-- menampilkan halaman wishlist -->
 <div class="putih">
     <div class="main">
-    <?php if(isset($_SESSION['id'])AND($data['wish']==null)) {?>
+    <?php if(!isset($_SESSION['id'])) {?>
         <div class="emptylogoshield">
             <img class="emptylogo" src="<?= BASEURL; ?>/img/wishlistnot.png" alt="">
             <h3 class="bold">Wishlist Anda Kosong</h3>
@@ -43,25 +43,23 @@
                 </div>
             <?php endforeach;?>
         <?php }?>
-    </div>
-    <div class="main">
-        <div class="barang">
-            <h3 class="bold">Pilihan yang Terinspirasi: Apa yang Mungkin Anda Sukai</h3>
-            <?php foreach($data['barang'] as $it):?>
-            <a href="<?= BASEURL;?>/Main/Detail/<?= $it['Id_Barang'] ?>" class="cardd">
-                <img class="carddis" src="<?= BASEURL."/gambar/".$it['Pic']?>" alt="">
-                <div>
-                    <div class="bris">
-                        <h6 class="brand"><?= $it['Brand']?></h6>
-                        <img  src="" alt="">
-                    </div>
-                    <h6 class="deskripsi"><?= $it['Descr']?></h6>
-                    <h6 class="harga">Rp <?= $it['Harga']?></h6>
+    </div><br><br>
+    <div class="bold fontsize">Temuan Teratas & Penawaran Menarik dalam Kategori Anda</div><br><br>
+    <div class="main1 gray">
+        <?php foreach($data['rek'] as $ss):?>
+                <div class="cardlist">
+                    <a class="cardd" href="<?= BASEURL;?>/Main/Detail/<?= $ss['Id_Barang'] ?>" >
+                        <img class="cardimage" src="<?= BASEURL."/gambar/".$ss['Pic']?>" alt="">
+                        <div class="hades">
+                            <div class="bris">
+                                <span class="brand"><?= $ss['Brand']?></span>
+                                <!-- <button><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></button> -->
+                            </div>
+                            <h6 class="deskripsi"><?= $ss['Descr']?></h6>
+                            <h6 class="harga">Rp <?= number_format($ss['Harga'],0,",",".");?></h6>
+                        </div>
+                    </a>
                 </div>
-                <!-- <a href="">Masukkan ke Tas</a> -->
-            </a>
             <?php endforeach;?>
-            
-        </div>
-    </div>
+    </div><br><br>
 </div>

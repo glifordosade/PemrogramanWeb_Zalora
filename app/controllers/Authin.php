@@ -2,8 +2,12 @@
 class Authin extends Controller{
     // menampilkan halaman tambah barang
     public function index(){
-        $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
-        $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+        if(isset($_SESSION['id'])){
+            $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
+            $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+        }else{
+            $data['rek'] = $this->model('cardModel')->random();
+        }
         $data['title'] = 'Tambah Barang';
         $this->view('tamplate/header1', $data );
         $this->view('akun/authin',);

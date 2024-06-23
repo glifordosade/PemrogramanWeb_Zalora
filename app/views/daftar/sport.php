@@ -10,7 +10,7 @@
             <a href=""><img class="bulatan" src="<?= BASEURL;?>/img/stujuh.png" alt="gambar"></a>
             <a href=""><img class="bulatan" src="<?= BASEURL;?>/img/sdelapan.png" alt="gambar"></a>
         </div>
-    </div>
+    </div><br><br>
     <div class="main">
         <div>
             <div class="slideshow-container" id="slideshow1">
@@ -31,7 +31,27 @@
                 <span class="dot" onclick="currentSlide(2, 0)"></span> 
             </div>
         </div>
-    </div>
+    </div><br><br>
+
+    <div class="bold fontsize">Temuan Teratas & Penawaran Menarik dalam Kategori Sport</div>
+    <div class="main">
+        <?php foreach($data['sport'] as $ss):?>
+                <div class="cardlist">
+                    <a class="cardd" href="<?= BASEURL;?>/Main/Detail/<?= $ss['Id_Barang'] ?>" >
+                        <img class="cardimage" src="<?= BASEURL."/gambar/".$ss['Pic']?>" alt="">
+                        <div class="hades">
+                            <div class="bris">
+                                <span class="brand"><?= $ss['Brand']?></span>
+                                <!-- <button><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></button> -->
+                            </div>
+                            <h6 class="deskripsi"><?= $ss['Descr']?></h6>
+                            <h6 class="harga">Rp <?= number_format($ss['Harga'],0,",",".");?></h6>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach;?>
+    </div><br><br>
+
     <div class="main">
         <div>
             <!-- Slideshow 2 -->
@@ -53,5 +73,5 @@
                 <span class="dot" onclick="currentSlide1(2, 0)"></span> 
             </div>
         </div>
-    </div>
+    </div><br><br><br>
 </div>
