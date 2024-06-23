@@ -129,6 +129,8 @@
 .tombol{
     border: 1px solid black;
     padding: 10px;
+    color: black;
+    text-decoration: none;
 }
 
 .tombol:hover{

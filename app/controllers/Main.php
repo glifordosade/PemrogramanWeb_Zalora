@@ -27,6 +27,7 @@ class Main extends Controller{
             $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
             $data['cekbag'] = $this->model('cardModel')->PerIdCek($ID,$_SESSION['id']);
             $data['cekwish'] = $this->model('cardModel')->PerIdCekWish($ID,$_SESSION['id']);
+            $data['rek'] = $this->model('cardModel')->rek($_SESSION['gen']);
         }else{
             $data['rek'] = $this->model('cardModel')->random1();
         }

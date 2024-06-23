@@ -29,28 +29,32 @@
                         </select>
                     </div>
                     <div class="brandescr">
-                    <!-- menentukan apakah barang telah di masukkan ke keranjang atau belum -->
-                <?php if(isset($_SESSION['id'])) {?>
-                    <?php if($data['cekbag']!=1) {?>
-                        <button class="linkks" type="submit" name="barang" value="<?= $data['barang']['Id_Barang'];?>">Masukkan ke Tas</button>
-                    <?php }else{?>
-                        <div class="linkknot" >Masukkan ke Tas</div>
-                    <?php }?>
-                <?php }else{?>
-                    <a class="linkks" href="<?= BASEURL;?>/Regist/pelma" >Masukkan ke Tas</a>
-                <?php }?>
+                        <div class="flextengah">
+                         <!-- menentukan apakah barang telah di masukkan ke keranjang atau belum -->
+                         <?php if(isset($_SESSION['id'])) {?>
+                             <?php if($data['cekbag']!=1) {?>
+                                 <button class="linkks" type="submit" name="barang" value="<?= $data['barang']['Id_Barang'];?>">Masukkan ke Tas</button>
+                             <?php }else{?>
+                                 <div class="linkknot" >Masukkan ke Tas</div>
+                             <?php }?>
+                         <?php }else{?>
+                             <a class="linkks" href="<?= BASEURL;?>/Regist/pelma" >Masukkan ke Tas</a>
+                         <?php }?>
 
-                <!-- menentukan apakah barang telah di masukkan ke wishlist atau belum -->
-                <?php if(isset($_SESSION['id'])) {?>
-                    <?php if($data['cekwish']!=1) {?>
-                        <a class="logshield" href="<?= BASEURL;?>/Wish/tambWish/<?= $data['barang']['Id_Barang'];?>"><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></a>
-                    <?php }else{?>
-                        <a class="logshield" href="<?= BASEURL;?>/Wish/hapusdetail/<?= $data['barang']['Id_Barang'];?>"><img class="loggo" src="<?= BASEURL;?>/img/love.png" alt=""></a>
-                    <?php }?>
-                <?php }else{?>
-                    <a class="logshield" href="<?= BASEURL;?>/Regist/pelma"><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></a>
-                <?php }?>
-                    </div>
+
+                         <!-- menentukan apakah barang telah di masukkan ke wishlist atau belum -->
+                         <?php if(isset($_SESSION['id'])) {?>
+                             <?php if($data['cekwish']!=1) {?>
+                                 <a class="logshield" href="<?= BASEURL;?>/Wish/tambWish/<?= $data['barang']['Id_Barang'];?>"><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></a>
+                             <?php }else{?>
+                                 <a class="logshield" href="<?= BASEURL;?>/Wish/hapusdetail/<?= $data['barang']['Id_Barang'];?>"><img class="loggo" src="<?= BASEURL;?>/img/love.png" alt=""></a>
+                             <?php }?>
+                         <?php }else{?>
+                             <a class="logshield" href="<?= BASEURL;?>/Regist/pelma"><img class="loggo" src="<?= BASEURL;?>/img/wishlist.png" alt=""></a>
+                         <?php }?>
+                             </div>
+                     </div>
+
                 </form>
 
             <div class="brandescr">

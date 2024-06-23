@@ -78,6 +78,28 @@ class Ubahdatakun extends Controller{
             header("Location: ".BASEURL."/Ubahdatakun");
         }
     }
+
+    public function alamat(){
+        $email = $_POST['email'];
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $gender = $_POST['gender'];
+        $phone = (int) $_POST['phone'];
+        $ttl = $_POST['ttl'];
+        $Alamat = $_POST['alamat'];
+        $pos = (int)$_POST['pos'];
+        $id = $_POST['id'];
+        $pass1 = $_POST['pass'];
+        
+
+        // var_dump($_POST);
+
+        if($this->model('userModel')->updateUser($id,$email,$fname,$lname,$pass1,$gender,$phone,$ttl,$Alamat,$pos)>0){
+        header("Location: ".BASEURL."/Account");
+        }else{
+            header("Location: ".BASEURL."/Ubahdatakun");
+        }
+    }
 }
 
 ?>

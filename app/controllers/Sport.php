@@ -6,6 +6,7 @@ class Sport extends Controller{
         if(isset($_SESSION['id'])){
             $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
             $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+            $data['sport'] = $this->model('cardModel')->ransport();
         }else{
             $data['sport'] = $this->model('cardModel')->ransport();
         }

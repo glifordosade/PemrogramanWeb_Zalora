@@ -8,6 +8,13 @@
             <p class="thin">Mulai belanja dan temukan tampilan favorit anda</p>
             <a class="linkk" href="<?= BASEURL;?>">Ayo Belanja</a>
         </div>
+    <?php }else if($data['isiwish']==null) {?>
+        <div class="emptylogoshield">
+            <img class="emptylogo" src="<?= BASEURL; ?>/img/wishlistnot.png" alt="">
+            <h3 class="bold">Wishlist Anda Kosong</h3>
+            <p class="thin">Mulai belanja dan temukan tampilan favorit anda</p>
+            <a class="linkk" href="<?= BASEURL;?>">Ayo Belanja</a>
+        </div>
         <?php }else{?>
             <?php foreach($data['isiwish'] as $it):?>
                 <div class="cardlist">
@@ -30,8 +37,8 @@
                             $b = strval($it['Size']);
                             $arr = explode(",", $b);
                         ?>
-                        <select class="ukuranwish" name="size">
-                            <option value="">Pilih Ukuran</option>
+                        <span>Ukuran</span><br>
+                        <select class="ukuranwish" name="size" required>
                         <?php foreach ($arr as $a) {?>
                             <option value="<?= $a?>"><?= $a?></option>
                         <?php } ?>

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="<?= BASEURL;?>/css/pelbaru.css">
     <link rel="stylesheet" href="<?= BASEURL;?>/css/nav1.css">
     <link rel="stylesheet" href="<?= BASEURL;?>/css/auth.css">
+    <link rel="stylesheet" href="<?= BASEURL;?>/css/card.css">
+    <link rel="stylesheet" href="<?= BASEURL;?>/css/cart.css">
+    <link rel="stylesheet" href="<?= BASEURL;?>/css/alamat.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel="icon" type="image/png" href="<?= BASEURL;?>/img/favicon.png">
     <title><?= $data['title'];?></title>
@@ -71,7 +74,13 @@
                     </ul><?php endif?>
                     </span>
                 <a href="<?= BASEURL;?>/Wish"><img class="log1o" src="<?= BASEURL;?>/img/wishput.svg" alt="wishlist"></a>
+                <?php if(isset($_SESSION['id'])AND($data['wish']>0)){?>
+                    <span class="notifsum"><?= $data['wish'];?></span>
+                <?php } ?>
                 <a href="<?= BASEURL;?>/Bag"><img class="log1o" src="<?= BASEURL;?>/img/bagput.svg" alt="bag"></a>
+                <?php if(isset($_SESSION['id'])AND($data['wish']>0)){?>
+                    <span class="notifsum"><?= $data['bag'];?></span>
+                <?php } ?>
             </div>
         </nav>
     </header>

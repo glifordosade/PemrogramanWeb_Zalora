@@ -55,6 +55,7 @@ class Authup extends Controller{
                 }
                 
             if($this->model('cardModel')->Ubahbarang($id,$nambar,$harga,$brand,$desc,$kategory,$gambar,$stock)>0){
+                Flasher::setFlash('Barang berhasil','diupdate','Hijau');
                 header('Location: '.BASEURL.'/Authread');
             }
         }

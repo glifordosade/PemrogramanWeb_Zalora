@@ -16,10 +16,11 @@ class Regist extends Controller{
     }
 
     // menampilkan halaman login untuk user
-    public function pelma(){
+    public function pelma($a=null){
+        $data['data'] = $a;
         $data['title'] = 'Zalora | Masuk';
         $this->view('tamplate/header1',$data);
-        $this->view('Regist/pelma');
+        $this->view('Regist/pelma',$data);
         $this->view('tamplate/footer');
     }
 

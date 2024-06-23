@@ -16,9 +16,10 @@
   <link rel="stylesheet" href="<?= BASEURL;?>/css/cart.css">
   <link rel="stylesheet" href="<?= BASEURL;?>/css/detail.css">
   <link rel="stylesheet" href="<?= BASEURL;?>/css/bag.css">
+  <link rel="stylesheet" href="<?= BASEURL;?>/css/alamat.css">
   <link rel="icon" type="image/png" href="<?= BASEURL;?>/img/favicon.png">
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-  <title><?= $data['title'];?></title>
+  <title>ZALORA | <?= $data['title'];?></title>
 </head>
 <body>
   <header class="headd">
@@ -68,23 +69,10 @@
           <?php if(isset($_SESSION['id'])AND($data['wish']>0)){?>
             <span class="notifsum"><?= $data['wish'];?></span>
           <?php } ?>
-          <span id="bag">
             <a href="<?= BASEURL;?>/Bag"><img class="log1o" src="<?= BASEURL;?>/img/bag.png" alt="bag"></a>
             <?php if(isset($_SESSION['id'])AND($data['bag']>0)){?>
               <span class="notifsum"><?= $data['bag'];?></span>
             <?php } ?>
-                <div id="isitas">
-                  <div id="padpad">
-                    <img id="loggg" src="<?= BASEURL;?>/img/bagg.png" alt="">
-                    <h3 class="bold">Your Bag is empty</h3>
-                    <p class="thin">Start filling it up with your favourites</p>
-                    <a class="linkk" href="<?= BASEURL?>">See What`s New</a>
-                  </div>
-                </div>
-          </span>
-          <ul>
-            
-          </ul>
         </div>
       </nav>
       <ul id="kategory">

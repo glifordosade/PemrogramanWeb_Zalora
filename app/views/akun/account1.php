@@ -81,43 +81,16 @@
             <div class="blokket">
                 <h1>Alamat Penagihan/Alamat Pengiriman</h1>
                 <div id="masukdikit">
-                    <hr>
-
-
-                    <form class="alamat" action="<?= BASEURL; ?>/Ubahdatakun/alamat" method="POST">
-
-                        <!-- kosong -->
-                        <input type="text" name="id" value="<?= $_SESSION['id']?>" style="display: none;">
-                        <input type="text" name="email" value="<?= $data['userdat']['Email']?>" style="display: none;">
-                        <input type="text" name="pass" value="<?= $data['userdat']['Password']?>" style="display: none;">
-                        <input type="date" name="ttl" value="<?= $data['userdat']['TanggalLahir']?>" style="display: none;">
-                        <!-- kosong -->
-                        
-                        
-                        <label for="">Nama Depan</label>
-                        <input class="alepapan" type="text" name="fname" value="<?= $data['userdat']['FirstName']?>" placeholder="Nama Depan">
-                        
-                        <label for="">Nama Belakang</label>
-                        <input class="alepapan" type="text" name="lname" value="<?= $data['userdat']['LastName']?>" placeholder="Nama Belakang"><br>
-                        
-                        <label for="">Gender</label><br>
-                        <select class="alepapan" name="gender" id="">
-                            <option value="<?= $data['userdat']['Gender']?>"><?= $data['userdat']['Gender']?></option>
-                            <option value="Pria">Pria</option>
-                            <option value="Wanita">Wanita</option>
-                        </select><br><br>
-
-                        <label for="">Nomor Handphone</label>
-                        <input class="alepapan" type="number" name="phone" value="<?= $data['userdat']['Telephone']?>" placeholder="Nomer Hanphone">
-                        
-                        <label for="">Alamat</label><br>
-                        <textarea class="alepapan" rows="6" style="resize: none;" name="alamat" placeholder="Masukkan Alamat Anda"><?= $data['userdat']['Alamat']?></textarea>
-
-                        <label for="">Kode Pos</label>
-                        <input  class="alepapan" type="number"name="pos" value="<?= $data['userdat']['KodePos']?>" placeholder="Kode Pos"><br><br>
-                        <input class="tombol" type="submit">
-                            <a class="tombol" href="<?= BASEURL;?>/Account">Cancel</a>
-                    </form>
+                    <div class="addresss">
+                        <div class="alamat">
+                            <h2 class="bold fontsize">ALAMAT</h2>
+                            <p class="texks"><?= $data['userdat']['FirstName']." ".$data['userdat']['LastName'].", ".$data['userdat']['Telephone'] ?></p>
+                            <p class="texks"><?= $data['userdat']['Alamat'].", ".$data['userdat']['KodePos'] ?></p>
+                        </div>
+                        <div class="bio1">
+                            <a href="<?=BASEURL;?>/Account/account1">UBAH</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ class Wanita extends Controller{
         if(isset($_SESSION['id'])){
             $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
             $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+            $data['wanita'] = $this->model('cardModel')->ranwanita();
         }else{
             $data['wanita'] = $this->model('cardModel')->ranwanita();
         }

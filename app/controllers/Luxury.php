@@ -5,6 +5,7 @@ class Luxury extends Controller{
         if(isset($_SESSION['id'])){
             $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
             $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+            $data['lux'] = $this->model('cardModel')->ranlux();
         }else{
             $data['lux'] = $this->model('cardModel')->ranlux();
         }

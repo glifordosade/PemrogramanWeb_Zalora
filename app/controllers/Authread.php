@@ -21,7 +21,7 @@ class Authread extends Controller{
         $location = "gambar/".$nam['Pic'];
         if (file_exists($location)) {
             unlink('gambar/' . $nam["Pic"]);
-            var_dump($namaGambar);
+            // var_dump($namaGambar);
 	    }
         $dat['barang'] = $this->model('cardModel')->Hapus($ID);
         header("Location: ".BASEURL."/Authread");

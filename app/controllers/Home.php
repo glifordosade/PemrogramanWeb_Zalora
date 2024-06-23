@@ -5,6 +5,7 @@ class Home extends Controller{
         if(isset($_SESSION['id'])){
             $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
             $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
+            $data['rek'] = $this->model('cardModel')->rek($_SESSION['gen']);
         }else{
             $data['rek'] = $this->model('cardModel')->random();
         }
@@ -19,11 +20,7 @@ class Home extends Controller{
     public function logout(){
         session_unset();
         session_destroy();
-        $data['title'] = 'Home';
-        // $data['isi'] = $this->model('userModel')->();
-        $this->view('tamplate/header', $data);
-        $this->view('home/index');
-        $this->view('tamplate/footer');
+        header("Location: ".BASEURL);
     }
 
 }

@@ -7,6 +7,7 @@ class Wish extends Controller{
             $data['bag'] = $this->model('cardModel')->sumBag($_SESSION['id']);
             $data['wish'] = $this->model('cardModel')->sumWish($_SESSION['id']);
             $data['isiwish'] = $this->model('wishModel')->show($_SESSION['id']);
+            $data['rek'] = $this->model('cardModel')->rek($_SESSION['gen']);
         }else{
             $data['rek'] = $this->model('cardModel')->random1();
         }

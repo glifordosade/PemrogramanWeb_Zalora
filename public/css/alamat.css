@@ -1,0 +1,61 @@
+.alamat{
+    width: 60%;
+    display: inline-block;
+}
+
+.addresss{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bold{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.texks{
+    font-size: small;
+    padding: 5px;
+}
+
+
+/* =========================== NOTIFIKASI ============================================== */
+
+.Hijau{
+    background-color:rgb(191, 255, 191);
+    color: green;
+    border: 2px solid green;
+}
+
+.Merah{
+    position: absolute;
+    background-color:rgb(255, 193, 193);
+    color: rgb(170, 41, 41);
+    border: 2px solid rgb(170, 41, 41);
+    z-index: 9999;
+}
+
+.bodysize{
+    width: 300px;
+    display: inline-block;
+    position: absolute;
+    border-radius: 20px;
+    animation-name: anim;
+    animation-duration: 5s;
+    top: 300px;
+    /* margin-left: -700px; */
+}
+
+/* @keyframes anim{
+    0%{margin-left: -700px;}    
+    20%{margin-left: 500px;}    
+    80%{margin-left: 500px;}    
+    100%{margin-left: -700px;}    
+} */
+
+.merah{
+    color: red;
+    font-size: small;
+}

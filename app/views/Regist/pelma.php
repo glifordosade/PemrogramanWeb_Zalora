@@ -10,12 +10,17 @@
     </div>
     <br>
     <!-- menampilkan notifikasi jika dari kontroller mengirimkan triger notifikasi -->
+    
     <form id="registration-form" method="POST" action="<?= BASEURL;?>/Account/log">
         <label for="email">Alamat Email</label>
         <input class="alepapan" type="email" name="email">
 
         <label for="password">Password</label>
-        <input class="alepapan" type="password" name="password">
+        <input class="alepapan" type="password" name="password"><br><br>
+
+        <?php if(isset($data['data'])AND ($data['data']!=null)){?>
+            <h1 class="merah">Email atau Password salah</h1>
+        <?php }?>
         
         <a href="#" id="lupa">lupa Password</a>
         

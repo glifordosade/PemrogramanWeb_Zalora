@@ -1,9 +1,10 @@
 <!-- menampilkan notifikasi jika dari kontroller mengirimkan triger notifikasi -->
+ <br><br>
 <div class="isiakun">
     <div class="user">
         <div id="setdiv">ADMIN</div>
         <ul>
-            <a class="akunsel" href="<?= BASEURL;?>/Account">
+            <a class="akunsel" id="aktif" href="<?= BASEURL;?>/Account">
                 <li>Akun Saya</li>
             </a>
             <a class="akunsel" href="#">
@@ -24,12 +25,21 @@
             <a class="akunsel" href="#">
                 <li>Konfigurasi Gopay</li>
             </a>
-            <a class="akunsel" id="aktif" href="<?= BASEURL;?>/Authread">
-                <li>Barang</li>
-            </a>
-            <a class="akunsel" href="<?= BASEURL;?>/Authin">
-                <li>Tambah Barang</li>
-            </a>
+            <?php if(isset($_SESSION['email'])&&($_SESSION['email']=='adminmin@gmail.com')){ ?>
+                <a class="akunsel" href="<?= BASEURL;?>/Authread">
+                    <li>Barang</li>
+                </a>
+                <a class="akunsel" href="<?= BASEURL;?>/Authin">
+                    <li>Tambah Barang</li>
+                </a>
+            <?php }else{?>
+                <a class="akunsel" href="<?= BASEURL;?>/Account">
+                <li>ulasan saya</li>
+                </a>
+                <a class="akunsel" href="<?= BASEURL;?>/Account">
+                    <li>Konfirmasi Transfer</li>
+                </a>
+            <?php }?>
             <a class="akunsel" href="#">
                 <li>Preferensi Email</li>
             </a>
@@ -79,4 +89,4 @@
             </div>
         </div>
     </div>
-</div>
+</div><br><br><br>

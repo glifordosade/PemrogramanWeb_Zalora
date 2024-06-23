@@ -1,6 +1,13 @@
 <div class="putih">
     <div class="main">
-        <?php if(isset($_SESSION['id']) OR ($_SESSION==null)) {?>
+        <?php if(!isset($_SESSION['id'])) {?>
+        <div class="emptylogoshield">
+            <img class="emptylogo" src="<?= BASEURL; ?>/img/wishlistnot.png" alt="">
+            <h3 class="bold">Tas Anda Kosong</h3>
+            <p class="thin">Ayo penuhi dengan barang-barang favorit anda</p>
+            <a class="linkk" href="<?= BASEURL;?>">Ayo Belanja</a>
+        </div>
+        <?php }else if($data['isibag']==null) {?>
         <div class="emptylogoshield">
             <img class="emptylogo" src="<?= BASEURL; ?>/img/wishlistnot.png" alt="">
             <h3 class="bold">Tas Anda Kosong</h3>
@@ -20,8 +27,9 @@
                                 <p style="color: gray; padding-top: 10px;"><?= $it['Descr'] ?></p>
                                 <p style="color: gray; padding-top: 10px;">Pengiriman pada: <span style="color: green;">25 - 27 Jun</span></p>
                                 <div class="set">
-                                    <p style="color: gray; padding-top: 10px;">Ukuran: <?= $it['Size'] ?></p>
-                                    <input class="sizebag" type="number" max="<?= $it['Stock'] ;?>" name="jumlah" placeholder="jumlah">
+                                    <p style="color: gray; padding-top: 10px;">Ukuran: <?= $it['Size'] ?></p><br>
+                                    <label for="">Jumlah</label>
+                                    <input class="sizebag" type="number" min="1" max="<?= $it['Stock'] ;?>" name="jumlah" placeholder="jumlah">
                                     <span class="hargabag">Rp <?= number_format($it['Harga'],0, ',', '.');?></span>
                                 </div>
                                 <div class="voucher">
